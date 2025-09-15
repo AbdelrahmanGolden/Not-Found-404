@@ -63,7 +63,7 @@ These areas are intentionally left out for the contest demo and are documented a
 ## Repo Files:
 
 - `excalidraw/` — architecture and data model diagrams.  
-- `docs/api.md` — core APIs.  
+- `api.md` — core APIs.  
 - `code/` — prototype backend.  
 - `deep_dive.md` — detailed design, scaling plans, and component decisions.  
 
