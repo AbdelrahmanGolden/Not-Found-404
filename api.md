@@ -1,6 +1,6 @@
 # API
 
-Auth
+## Auth
 
 POST /auth/register -> 201 (User + Token)
 {
@@ -21,7 +21,8 @@ GET /auth/me -> 200 (User)
 
 ---
 
-Users
+## Users
+
 GET /users/{userId} -> 200 (PublicUser)
 
 PUT /users/{userId} -> 200 (User)
@@ -31,7 +32,8 @@ PUT /users/{userId} -> 200 (User)
 
 ---
 
-Movies
+## Movies
+
 GET /movies -> 200 [MovieSummary]
 {
     q?, genre?, year?, actor?, tag?, page?, per_page?
@@ -41,7 +43,8 @@ GET /movies/{movieId} -> 200 (MovieDetails)
 
 ---
 
-Admin (role=admin)
+## Admin (role=admin)
+
 POST /admin/movies -> 201 (MovieId)
 {
     title, year, genres[]
@@ -55,7 +58,8 @@ POST /admin/users/{userId}/ban -> 200
 
 ---
 
-Reviews
+## Reviews
+
 POST /movies/{movieId}/reviews -> 201 (ReviewId)
 {
     rating, body
@@ -69,7 +73,8 @@ DELETE /reviews/{reviewId} -> 204
 
 ---
 
-Collections
+## Collections
+
 POST /users/{userId}/collections -> 201 (CollectionId)
 {
     title, movieIds[], visibility
@@ -86,7 +91,8 @@ DELETE /collections/{collectionId}/items/{movieId} -> 204
 
 ---
 
-Continue Watching
+## Continue Watching
+
 POST /users/{userId}/watch -> 200
 {
     movieId, progressSeconds, lastWatchedAt
@@ -96,13 +102,15 @@ GET /users/{userId}/watch -> 200 [WatchEntry]
 
 ---
 
-Recommendations
+## Recommendations
+
 GET /users/{userId}/recommendations -> 200 [MovieSummary]
 (max 20)
 
 ---
 
-Notifications
+## Notifications
+
 GET /users/{userId}/notifications -> 200 [Notification]
 
 POST /notifications/send -> 200
@@ -110,7 +118,8 @@ POST /notifications/send -> 200
 
 ---
 
-Social
+## Social
+
 POST /users/{userId}/follow -> 200
 
 GET /users/{userId}/followers -> 200 [UserSummary]
