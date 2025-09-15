@@ -1,6 +1,7 @@
 # API
 
 Auth
+
 POST /auth/register -> 201 (User + Token)
 {
     email, username, password
@@ -10,6 +11,8 @@ POST /auth/login -> 200 (User + Token)
 {
     email, password
 }
+
+POST /auth/refresh -> 200 (Token)
 
 GET /auth/me -> 200 (User)
 {
@@ -31,7 +34,7 @@ PUT /users/{userId} -> 200 (User)
 Movies
 GET /movies -> 200 [MovieSummary]
 {
-    q?, genre?, year?, page?, per_page?
+    q?, genre?, year?, actor?, tag?, page?, per_page?
 }
 
 GET /movies/{movieId} -> 200 (MovieDetails)
@@ -47,6 +50,8 @@ POST /admin/movies -> 201 (MovieId)
 PUT /admin/movies/{movieId} -> 200
 
 DELETE /admin/movies/{movieId} -> 204
+
+POST /admin/users/{userId}/ban -> 200
 
 ---
 
@@ -72,6 +77,13 @@ POST /users/{userId}/collections -> 201 (CollectionId)
 
 GET /users/{userId}/collections -> 200 [CollectionSummary]
 
+POST /collections/{collectionId}/items -> 200
+{
+    movieId
+}
+
+DELETE /collections/{collectionId}/items/{movieId} -> 204
+
 ---
 
 Continue Watching
@@ -92,3 +104,21 @@ GET /users/{userId}/recommendations -> 200 [MovieSummary]
 
 Notifications
 GET /users/{userId}/notifications -> 200 [Notification]
+
+POST /notifications/send -> 200
+(admin/internal)
+
+---
+
+Social
+POST /users/{userId}/follow -> 200
+
+GET /users/{userId}/followers -> 200 [UserSummary]
+
+GET /users/{userId}/following -> 200 [UserSummary]
+
+---
+
+Search
+GET /search?q=... -> 200
+(results: movies, users, collections)
