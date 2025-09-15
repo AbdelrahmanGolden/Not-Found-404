@@ -12,31 +12,31 @@
 
 ## Functional Requirements
 1. **Sign up | Login and User Profile**  
-- User registration, login (email and password), and a profile.
+    - User registration, login (email and password), and a profile.
 
 2. **Admin Profile** 
-- can add/edit/delete movies and ban users.
+    - can add/edit/delete movies and ban users.
 
 3. **Categories tab (Movies and TV Shows)**  
-- Browse by genre, year, popular/new releases, and “My interests”.
+    - Browse by genre, year, popular/new releases, and “My interests”.
 
 4. **Search**  
-- Search movies and shows by title, actor, director, genre, or tag.
+    - Search movies and shows by title, actor, director, genre, or tag.
 
 5. **Ratings and Reviews**  
-- Users can rate (0–10) and write reviews for movies/shows; reviews are editable and deletable by their authors.
+    - Users can rate (0–10) and write reviews for movies/shows; reviews are editable and deletable by their authors.
 
 6. **Collections / Lists**  
-- Users can create, edit, and share custom lists, and lists appear on their profile.
+    - Users can create, edit, and share custom lists, and lists appear on their profile.
 
 7. **Recommendations**  
-- Recommendation endpoint returns up to 20 suggested movies for a user.
+    - Recommendation endpoint returns up to 20 suggested movies for a user.
 
 8. **Notifications**  
-- Notifications when a new episode of a series the user follows is released or if one of his friends recommended to him.
+    - Notifications when a new episode of a series the user follows is released or if one of his friends recommended to him.
 
 8. **Continue Watching**  
-- Track watch progress so users can resume a movie or episode where they left off.
+    - Track watch progress so users can resume a movie or episode where they left off.
 
 
 ## Non-Functional Requirements
