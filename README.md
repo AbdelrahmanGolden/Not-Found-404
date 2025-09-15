@@ -1,4 +1,5 @@
-# Not-Found-404
+
+# IEEEMDB: The submission of Team Not-Found-404
 
 **IEEEMDB** is an online platform that combines a **personal movie diary** with a **social & gamified discovery experience**. It helps users discover movies and shows, track what they’ve watched, write reviews, create collections, and share with friends. Admins can manage the movie catalog and moderate content. The system also supports recommendations and notifications to keep users engaged.
 
@@ -11,28 +12,31 @@
 
 ## Functional Requirements
 1. **Sign up | Login and User Profile**  
-   - User registration, login (email and password), and a profile.
+- User registration, login (email and password), and a profile.
 
-2. **Categories tab (Movies and TV Shows)**  
-   - Browse by genre, year, popular/new releases, and “My interests”.
+2. **Admin Profile** 
+- can add/edit/delete movies and ban users.
 
-3. **Search**  
-   - Search movies and shows by title, actor, director, genre, or tag.
+3. **Categories tab (Movies and TV Shows)**  
+- Browse by genre, year, popular/new releases, and “My interests”.
 
-4. **Ratings and Reviews**  
-   - Users can rate (0–10) and write reviews for movies/shows; reviews are editable and deletable by their authors.
+4. **Search**  
+- Search movies and shows by title, actor, director, genre, or tag.
 
-5. **Collections / Lists**  
-   - Users can create, edit, and share custom lists, and lists appear on their profile.
+5. **Ratings and Reviews**  
+- Users can rate (0–10) and write reviews for movies/shows; reviews are editable and deletable by their authors.
 
-6. **Recommendations**  
-   - Recommendation endpoint returns up to 20 suggested movies for a user.
+6. **Collections / Lists**  
+- Users can create, edit, and share custom lists, and lists appear on their profile.
 
-7. **Notifications**  
-   - Notifications when a new episode of a series the user follows is released.
+7. **Recommendations**  
+- Recommendation endpoint returns up to 20 suggested movies for a user.
+
+8. **Notifications**  
+- Notifications when a new episode of a series the user follows is released or if one of his friends recommended to him.
 
 8. **Continue Watching**  
-   - Track watch progress so users can resume a movie or episode where they left off.
+- Track watch progress so users can resume a movie or episode where they left off.
 
 
 ## Non-Functional Requirements
@@ -55,7 +59,6 @@ These areas are intentionally left out for the contest demo and are documented a
 - **Gamification**: implemented as lightweight features that can be expanded later (points, badges, a simple leaderboard).  
 - **Admin**: a minimal admin interface for adding and moderating movies and reviews is part of the demo.
 
----
 
 ## Repo Files:
 
@@ -63,3 +66,4 @@ These areas are intentionally left out for the contest demo and are documented a
 - `docs/api.md` — core APIs.  
 - `code/` — prototype backend.  
 - `deep_dive.md` — detailed design, scaling plans, and component decisions.  
+
